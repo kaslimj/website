@@ -5,24 +5,152 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Red Bull Basement E-Portfolio</title>
 <meta name="description" content="E-portfolio documenting contributions as Social Media Copywriter, Graphic Designer, and Photographer for the Red Bull Basement University campaign.">
+
 <style>
-body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; scroll-behavior:smooth;}
-header { background: linear-gradient(to right, #e63946, #f77f00); color:white; text-align:center; padding:2rem;}
-nav { position:sticky; top:0; background:white; display:flex; justify-content:center; gap:1rem; padding:1rem; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:1000;}
-nav a { text-decoration:none; padding:0.5rem 1rem; border-radius:6px; color:#e63946; font-weight:600; transition:0.3s;}
-nav a:hover { background:#fdd; color:#9d0208;}
-section { max-width:900px; margin:2rem auto; padding:2rem; background:white; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.05);}
-section img, section video { width:100%; border-radius:12px; margin-bottom:1rem;}
-h2 { font-size:2rem; color:#9d0208; margin-bottom:1rem;}
-.caption { font-size:0.9rem; color:#555; margin-top:0.5rem;}
-footer { text-align:center; padding:1rem; background:#333; color:white; margin-top:2rem;}
+/* Entire website background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #e6e0f7; /* light purple behind all sections */
+    scroll-behavior: smooth;
+}
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(to right, #e63946, #f77f00);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+}
+header h1 { font-size: 2rem; margin: 0.2rem 0; }
+header p { margin: 0; font-size: 1rem; }
+
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 20px;
+}
+nav a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: #e63946;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover {
+    background: #fdd;
+    color: #9d0208;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2rem;       /* large title */
+    font-weight: bold;      /* bold */
+    color: #8b0000;         /* dark red */
+    margin-bottom: 1rem;    /* spacing below title */
+}
+
+/* Sections: keep original styling */
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Resize images */
+section img, section video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Home / Intro section - three columns */
+.intro-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+}
+.intro-columns {
+    display: grid;
+    grid-template-columns: 1.2fr 1.1fr 260px;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+.intro-left, .intro-middle, .intro-photo {
+    background: #e63946; /* soft neutral background */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+.intro-left p { margin: 0 0 1rem 0; font-size: 1rem; line-height: 1.5; color: #4a2c8a; }
+.intro-middle { display: flex; align-items: center; text-align: center; }
+.intro-middle p { margin: 0; font-size: 1rem; line-height: 1.5; color: #222; }
+.intro-photo { text-align: center; }
+.intro-photo img { width: 100%; max-height: 260px; object-fit: contain; border-radius: 10px; margin-bottom: 0.5rem; }
+
+/* Background Research - two columns */
+.research-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.research-left {
+    flex: 1 1 400px;
+    background: #fdf7f5;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    color: #333;
+    line-height: 1.6;
+}
+.research-right {
+    flex: 1 1 300px;
+    text-align: center;
+}
+.research-right img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Mobile responsiveness */
+@media(max-width: 950px){
+    .intro-columns { grid-template-columns: 1fr; }
+    .intro-photo img { margin: 0 auto; max-height: 320px; }
+    .research-columns { flex-direction: column; }
+    .research-right img { margin: 0 auto; }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Red Bull Basement Digital Campaign</h1>
-<p>E-Portfolio on Redbull basement | Social Media Copywriter, Graphic Designer, Photographer</p>
+<h1>Red Bull Basement University Campaign</h1>
+<p>E-Portfolio Project Overview</p>
 </header>
 
 <nav>
@@ -33,75 +161,120 @@ footer { text-align:center; padding:1rem; background:#333; color:white; margin-t
 <a href="#design">Social Media Design</a>
 <a href="#video">Video Production</a>
 <a href="#analytics">Audience Research</a>
+<a href="#process">Process Evidence</a>
 <a href="#reflection">Personal Reflection</a>
 <a href="#references">References</a>
 </nav>
 
 <main>
-
-<section id="home">
-<h2>Home</h2>
-<img src="1-home.png" alt="Home Page Mockup">
-<p>This e-portfolio documents my contributions as <strong>Social Media Copywriter, Graphic Designer, and Photographer</strong> in the Red Bull Basement University Digital Campaign.</p>
-<p>I created visuals, photography, and social media content targeting university students and Gen Z audiences.</p>
+<!-- Home Section -->
+<section id="home" class="intro-section">
+  <div class="intro-columns">
+    <div class="intro-left">
+      <p><strong>Presented by:</strong> Reece Ashley</p>
+      <p><strong>University:</strong> University of Northampton</p>
+      <p><strong>Class Project:</strong> Marketing & Campaign Design | 2026</p>
+      <p><strong>My Role:</strong> Social Media Copywriter, Visual Designer & Event Photographer</p>
+    </div>
+    <div class="intro-middle">
+      <p>This e-portfolio highlights my work as a Social Media Copywriter, Visual Designer, and Photographer for the Red Bull Basement University Campaign. It showcases visuals, photography, and social media content designed to engage university students and Gen Z audiences.</p>
+    </div>
+    <div class="intro-photo">
+      <img src="jj.png" alt="Red Bull Basement campaign overview">
+      <p class="caption">Campaign overview visual.</p>
+    </div>
+  </div>
 </section>
 
+<!-- Background Research Section -->
 <section id="research">
-<h2>Background Research</h2>
-<img src="2-research.png" alt="Background Research">
-<p>Studied Red Bull Basement, student innovation, Gen Z digital behavior, and social media campaign effectiveness. Sources: Statista, HubSpot, Mintel, WARC, and academic journals.</p>
+  <h2>Background Research</h2>
+  <div class="research-columns">
+    <div class="research-left">
+      <p>To create a meaningful and engaging campaign for Red Bull Basement, it was essential to understand the context and behaviors of university students. Red Bull Basement is a global initiative that empowers students to develop innovative solutions and share creative ideas, providing mentorship and exposure to bring their concepts to life.</p>
+      <p>Student innovation is significant because it nurtures fresh perspectives and encourages practical problem-solving skills. Supporting these initiatives helps students turn abstract ideas into real-world projects, fostering collaboration, creativity, and critical thinking.</p>
+      <p>Understanding Gen Z’s digital behavior was key. This generation values authenticity and originality, preferring content that is visually striking, concise, and relatable. Platforms such as Instagram and TikTok dominate their attention, so campaign materials were tailored for short-form, dynamic digital experiences.</p>
+      <p>Finally, social campaigns not only raise awareness but also build community and encourage peer interaction. Aligning the campaign with these insights ensured that content was both compelling and relevant, fostering participation and engagement across the target student audience.</p>
+    </div>
+    <div class="research-right">
+      <img src="vv.png" alt="Research Visual">
+      <p class="caption"><img src="hhj.jpg" alt="Research Visual"></p>
+    </div>
+  </div>
 </section>
 
+<!-- Remaining sections -->
 <section id="ideas">
-<h2>Idea Generation</h2>
-<img src="3-ideas.png" alt="Idea Generation">
-<p>Brainstormed and collaborated with the team. Generated ideas including TikTok innovation challenges, Instagram Reels, student testimonial videos, and interactive polls. Final campaign idea selected based on audience engagement potential.</p>
+  <h2>Idea Generation</h2>
+  <section> <div class="intro-columns"> <div class="intro-left">  <p>during idea generation I used:</p>
+  	<p><strong>Brainstorming Sessions:</strong> Explored a wide range of ideas from every team member.</p>
+      <p><strong>Collaboration:</strong> Open discussion and constructive feedback helped refine concepts.</p>
+      <p><strong>Creative Exploration:</strong> Experimented with formats, messaging styles, and engagement methods.</p>
+      <p><strong>Final Idea Selected:</strong> TikTok Innovation Challenge to encourage student participation.</p>
+      <p><strong>Our Focus:</strong> Create a student-driven campaign that connects, inspires, and leaves a lasting impact.</p>
+    </div> <div class="intro-right"> <p><strong>Top Ideas Identified:</strong></p> <ul> <li>TikTok Innovation Challenge</li> <li>Instagram Reels Series</li> <li>Student Testimonial Videos</li> <li>Countdown Posts</li> <li>Interactive Polls & Quizzes</li> <li>Behind-the-Scenes Content</li> </ul> <p>Our ultimate goal was to design a <strong>student-driven campaign</strong> that connects, inspires, and leaves a lasting impact within the university community.</p> </div> <div class="intro-image"> <img src="vf.jpg" alt="Idea Generation Visuals" /> <p class="caption">Visual representation of top campaign ideas and creative brainstorming outputs.</p> </div> </div> </section>
 </section>
 
 <section id="pitch">
-<h2>Pitching Ideas</h2>
-<img src="4-pitch.png" alt="Pitching Ideas">
-<p>Presented the campaign to peers and mentors. Incorporated feedback to refine visuals, copywriting, and content layout.</p>
+  <h2>Pitching Ideas</h2>
+  <p>I structured the campaign presentation from problem → insight → idea → strategy → execution.</p>
+  <p>I Presented campaign ideas to peers and mentors during a live pitching session. Feedback helped refine visuals, copywriting, and content layout for student engagement.</p>
+  <p>I led the presentation of our campaign idea, ensuring the story of our concept was clear and persuasive. I coordinated the visual and textual content to align with Red Bull Basement’s goals and incorporated the suggestions from my audience to strengthen the strategy.</p>
+  <img src="pitch.png" alt="Idea Generation Visuals" style="height: 200px;" /> <p class="caption">
 </section>
 
 <section id="design">
-<h2>Social Media Design</h2>
-<img src="mockup.png" alt="Social Media Design">
-<p>Created Canva templates, Instagram layouts, typography, and color palettes. Photography assets were integrated into social media designs.</p>
+  <h2>Social Media Design</h2>
+  <p>Created Instagram layouts, typography, and color palettes using Canva. Photography assets were integrated into designs to ensure consistent branding and visual appeal.</p>
 </section>
 
 <section id="video">
-<h2>Video Production</h2>
-<img src="6-video.png" alt="Social Media Design">
-<p style="background-color: red;">Contributed photography and visuals to campaign videos. Assisted in scripting, filming, and editing to ensure consistent visual branding.</p>
-<video controls>
-<source src="Download.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p class="caption" style="";>Video showcasing content creation, filming, and editing for the campaign.</p>
+  <h2>Video Production</h2>
+  <p>Contributed photography and visuals to campaign videos. Assisted in scripting, filming, and editing to maintain consistent visual branding.</p>
 </section>
 
 <section id="analytics">
-<h2>Audience Research & Analytics</h2>
-<img src="7-analytics.png" alt="Audience Research">
-<p>Conducted audience surveys, engagement analysis, and KPI planning. Ensured visuals and copywriting were tailored to Gen Z preferences.</p>
+  <h2>Audience Research & Analytics</h2>
+  <p>Conducted audience surveys, engagement analysis, and KPI planning. KPI metrics shown are illustrative for planning purposes only.</p>
+ <img src="bn.png" alt="Idea Generation Visuals" style="height: 200px;" /> <p class="caption">
+</section>
+
+<section id="process">
+  <h2>Process Evidence</h2>
+  <p>Included are screenshots of Canva drafts, brainstorming notes, and live campaign photos to demonstrate personal contribution and workflow.</p>
 </section>
 
 <section id="reflection">
-<h2>Personal Reflection</h2>
-<img src="8-reflection.png" alt="Personal Reflection">
-<p>Reflected on teamwork, creative process, and personal skill development in photography, graphic design, and social media content creation.</p>
+  <h2>Personal Reflection</h2><p>During the campaign, I faced the challenge of adapting visual templates to feel authentic for university students. Iterating Instagram layouts and refining typography improved my graphic design, photography, and social media content skills while reinforcing teamwork and problem-solving.</p>
+  <p>Participating in Red Bull Basement was more than a competition,it was a journey of growth, creativity, and self-discovery.</p>
+
+<p>Key Lessons:</p>
+<p>1.Creative Confidence: Learned to trust my ideas and turn them into impactful, original solutions.
+2.Teamwork & Collaboration: Working with a diverse team taught me the value of listening, sharing, and building together.
+3.Resilience: Overcoming challenges and feedback loops strengthened my adaptability and persistence.
+New Skills: Gained hands-on experience across research, video production, and analytics.
+4.Purpose & Impact: Realized the power of ideas to inspire, connect, and create meaningful change.</p>
+
+<p>Next Steps:</p>
+<p>I will continue learning, creating, and collaborating to bring more ideas to life and make a positive impact in the world.
+
+Keep producing engaging content
+Collaborate with like-minded peers
+Expand ideas on larger platforms
+
+Key Takeaway:
+Red Bull Basement empowered me to think bigger, act bolder, and believe in the impact of my ideas.</p>
 </section>
 
 <section id="references">
-<h2>References</h2>
-<p>HubSpot, Statista, Mintel, WARC, Academic Journals.</p>
+  <h2>References</h2>
+  <p>HubSpot, Statista, Mintel, WARC, Academic Journals.</p>
 </section>
 
 </main>
 
 <footer>
-<p>Portfolio created on Red Bull Basement| E-portfolio University Digital Campaign | 2026</p>
+<p>Portfolio created on Red Bull Basement | E-portfolio University Digital Campaign | 2026</p>
 </footer>
 
 </body>
